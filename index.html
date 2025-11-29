@@ -442,8 +442,8 @@
                                     <select class="form-select">
                                         <option selected>Requirement Type...</option>
                                         <option>Small Shop</option>
-                                        <option>Medium Space</option>
-                                        <option>Large Showroom Space</option>
+                                        <option>Medium Shop</option>
+                                        <option>Large Godown Space</option>
             
                                     </select>
                                 </div>
@@ -451,7 +451,7 @@
                             <textarea class="form-control" rows="4" placeholder="Message / Specific Requirements"></textarea>
                             <button type="submit" id="submitBtn" class="btn btn-primary-custom w-100 py-3">Send Enquiry</button>
                             <div id="formSuccess" class="alert alert-success mt-3 d-none">
-                                Thank you! Your enquiry has been sent. We will contact you shortly.
+                                Thank you! Please call on: 982-333-7670.
                             </div>
                         </form>
                     </div>
@@ -479,7 +479,7 @@
 
             // Simulate network delay
             setTimeout(function() {
-                btn.innerHTML = 'Sent Successfully!';
+                btn.innerHTML = 'Sent Successfully! Please call on: 982-333-7670';
                 btn.classList.remove('btn-primary-custom');
                 btn.classList.add('btn-success');
                 successMsg.classList.remove('d-none');
