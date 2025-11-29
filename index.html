@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium shops for rent at Shri Vishweshwar Complex, Jagdamba Chowk, Shegaon. Main road touch commercial space with ample parking and modern amenities.">
+    <title>Shri Vishweshwar Complex | Prime Commercial Spaces in Shegaon</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Corrected typo in the line below -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #004aad; /* Deep Blue - Trust/Professional */
+            --secondary-color: #FFD700; /* Gold - Prosperity/Opportunity */
+            --dark-text: #333333;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-text);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+
+        .navbar-brand span {
+            color: var(--primary-color);
+        }
+
+        .nav-link {
+            color: var(--dark-text);
+            font-weight: 600;
+            margin-left: 15px;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary-custom:hover {
+            background-color: #00337a;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+            color: #000;
+            border: none;
+            padding: 10px 25px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+        .btn-secondary-custom:hover {
+            background-color: #e6c200;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+
+        /* Hero Section */
+        #hero {
+            /* Using a gradient overlay on a placeholder image */
+            background: linear-gradient(rgba(0, 62, 145, 0.8), rgba(0, 62, 145, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .location-tag {
+            background-color: var(--secondary-color);
+            color: var(--dark-text);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title.text-start::after {
+            left: 0;
+            transform: translateX(0);
+        }
+
+        /* Features */
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* Location Section */
+        #location {
+            background-color: var(--light-bg);
+        }
+        .location-map-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border: 2px solid var(--primary-color);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Simulating map appearance */
+        .location-map-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Google_Maps_Logo_2020.svg/2275px-Google_Maps_Logo_2020.svg.png');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .location-map-content {
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .contact-info i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+        .form-control, .form-select {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.5); /* Gold glow */
+            border-color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-building me-2" style="color: var(--primary-color);"></i>
+                Shri Vishweshwar <span>Complex</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary-custom" href="#contact">Enquire Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div id="hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="location-tag">
+                            <i class="fa-solid fa-location-dot me-2"></i> Jagdamba Chowk, Shegaon
+                        </div>
+                        <h1 class="hero-title">The Future Commercial Heart of Shegaon</h1>
+                        <p class="hero-subtitle">Premium Main Road Touch Shops for Rent. Give your business the visibility it deserves.</p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                            <a href="#features" class="btn btn-secondary-custom btn-lg">View Facilities</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">Book Site Visit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNQ_zlv1dnukQUja1tE7qZE8HOll2WPbh4RKI9N=w972-h240-k-no" alt="Retail Shops" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title text-start mb-4">Your Gateway to Success</h2>
+                    <p class="lead">Shri Vishweshwar Complex is designed for modern businesses seeking high visibility and convenience in Shegaon.</p>
+                    <p>Located strategically at the bustling Jagdamba Chowk, our complex offers commercial spaces right on the main road. Whether you are launching a new brand, expanding an existing retail outlet, or setting up a professional office, our versatile spaces provide the perfect foundation for growth.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> High footfall area perfect for retail.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Modern infrastructure and clean surroundings.</li>
+                        <li class="mb-2"><i class="fa-solid fa-circle-check text-primary me-2"></i> Flexible rental terms tailored to your needs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Premium Facilities</h2>
+            <p class="text-center mb-5">We provide the infrastructure so you can focus on your business.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-road feature-icon"></i>
+                        <h4>Main Road Touch</h4>
+                        <p>Unmatched visibility right on the main road. Catch the attention of every passerby at Jagdamba Chowk.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-square-parking feature-icon"></i>
+                        <h4>Ample Parking Space</h4>
+                        <p>Dedicated parking area ensuring a hassle-free experience for your customers and staff.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-faucet-drip feature-icon"></i>
+                        <h4>Reliable Water Service</h4>
+                        <p>Consistent and clean water supply available for all commercial units.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-layer-group feature-icon"></i>
+                        <h4>Multiple Options</h4>
+                        <p>Various shop sizes and configurations available. We have spaces to fit different business scales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="ideal-for">
+        <div class="container">
+            <h2 class="section-title mb-5">Ideal Spaces For</h2>
+            <div class="row text-center">
+                <div class="col-6 col-md-3 mb-4">
+                    <i class="fa-solid fa-shirt fa-3x text-primary mb-3"></i>
+                    <h5>Retail Stores</h5>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <i class="fa-solid fa-mobile-screen-button fa-3x text-primary mb-3"></i>
+                    <h5>Mobile & Electronics</h5>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <i class="fa-solid fa-utensils fa-3x text-primary mb-3"></i>
+                    <h5>QSR / Small Eateries</h5>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <i class="fa-solid fa-briefcase fa-3x text-primary mb-3"></i>
+                    <h5>Godown</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="section-title text-start">Unbeatable Location</h2>
+                    <p class="lead">Situated in the heart of Shegaon's commercial activity.</p>
+                    <p>Jagdamba Chowk is a central hub connecting key areas of Shegaon. Your business will benefit from high vehicular and pedestrian traffic throughout the day. Being main road touch ensures maximum brand exposure.</p>
+                    <div class="d-flex align-items-center mt-4">
+                        <i class="fa-solid fa-map-pin fa-2x text-danger me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Shri Vishweshwar Complex</h5>
+                            <p class="mb-0">Jagdamba Chowk, Khamgaon Rd, Rokadiya Nagar, Shegaon, Maharashtra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="location-map-placeholder">
+                        <div class="location-map-content text-center text-muted">
+                            <i class="fa-solid fa-map fa-4x mb-3 text-secondary"></i>
+                            <h5 class="text-dark">Google Map Placeholder</h5>
+                            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d361.95368079662217!2d76.68673168305861!3d20.79311546021105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd7450011fba6bf%3A0x93da7561ef1fa6d3!2sShri%20Vishweshwar%20Complex!5e0!3m2!1sen!2sca!4v1764437868054!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 style="color:white; font-weight: 800;">Secure Your Space Today</h2>
+                    <p class="lead">Don't miss this opportunity. Contact us for site visits, floor plans, and pricing details.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 mb-5 mb-md-0">
+                    <div class="contact-info">
+                        <h3 style="color:white;" class="mb-4">Get In Touch</h3>
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <div>
+                                <h5 style="color:white;" class="mb-0">Call Us</h5>
+                                <p style="color:rgba(255,255,255,0.8);" class="mb-0">+91 982-333-7670</p>
+                            </div>
+                        </div>
+                       
+                         <div class="d-flex align-items-center">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h5 style="color:white;" class="mb-0">Site Visit Hours</h5>
+                                <p style="color:rgba(255,255,255,0.8);" class="mb-0">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="bg-white p-4 p-md-5 rounded shadow-sm" style="color:var(--dark-text);">
+                        <h3 class="mb-4">Enquiry Form</h3>
+                        <form id="enquiryForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <select class="form-select">
+                                        <option selected>Requirement Type...</option>
+                                        <option>Small Shop</option>
+                                        <option>Medium Space</option>
+                                        <option>Large Showroom Space</option>
+            
+                                    </select>
+                                </div>
+                            </div>
+                            <textarea class="form-control" rows="4" placeholder="Message / Specific Requirements"></textarea>
+                            <button type="submit" id="submitBtn" class="btn btn-primary-custom w-100 py-3">Send Enquiry</button>
+                            <div id="formSuccess" class="alert alert-success mt-3 d-none">
+                                Thank you! Your enquiry has been sent. We will contact you shortly.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="mb-0">© 2025 Shri Vishweshwar Complex, Shegaon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple script to handle form submission visual effect
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = document.getElementById('submitBtn');
+            var successMsg = document.getElementById('formSuccess');
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+
+            // Simulate network delay
+            setTimeout(function() {
+                btn.innerHTML = 'Sent Successfully!';
+                btn.classList.remove('btn-primary-custom');
+                btn.classList.add('btn-success');
+                successMsg.classList.remove('d-none');
+                
+                // Reset after 3 seconds
+                setTimeout(function() {
+                    btn.disabled = false;
+                    btn.innerHTML = 'Send Enquiry';
+                    btn.classList.add('btn-primary-custom');
+                    btn.classList.remove('btn-success');
+                    successMsg.classList.add('d-none');
+                    document.getElementById('enquiryForm').reset();
+                }, 4000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
